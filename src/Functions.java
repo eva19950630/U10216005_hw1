@@ -1,0 +1,34 @@
+
+public abstract class Functions {
+
+	private int x;
+	
+	protected Functions() {
+	}
+	
+	protected Functions(int x) {
+		this.x = x;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	@Override
+	public String toString() {
+		return "The answer is " + x;
+	}
+	
+	public abstract double getFunctionA();
+	public abstract double getFunctionB();
+	public abstract double getFunctionC();
+	public abstract double getFunctionD();
+	public abstract double getFunctionE();
+	public abstract double getFunctionF();
+	public abstract double getFunctionG();
+	
+}
