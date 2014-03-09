@@ -9,7 +9,7 @@ public class TestFunctions {
 
 abstract class Functions {
 
-	private int x;
+	protected int x;
 	
 	protected Functions() {
 	}
@@ -28,7 +28,7 @@ abstract class Functions {
 
 	@Override
 	public String toString() {
-		return "The answer is " + x;
+		return "f(x) = " + x;
 	}
 	
 	public abstract double getFunctionA();
@@ -38,5 +38,44 @@ abstract class Functions {
 	public abstract double getFunctionE();
 	public abstract double getFunctionF();
 	public abstract double getFunctionG();
+	
+}
+
+class FunctionExample extends Functions {
+
+	@Override
+	public double getFunctionA() {
+		return Math.pow(x,x);
+	}
+
+	@Override
+	public double getFunctionB() {
+		return Math.sin(x);
+	}
+
+	@Override
+	public double getFunctionC() {
+		return Math.cos(x);
+	}
+
+	@Override
+	public double getFunctionD() {
+		return Math.tan(x);
+	}
+
+	@Override
+	public double getFunctionE() {
+		return Math.cos(x) + 5 * Math.sin(x);
+	}
+
+	@Override
+	public double getFunctionF() {
+		return 5 * Math.cos(x) + Math.sin(x);
+	}
+
+	@Override
+	public double getFunctionG() {
+		return Math.log(x) + Math.pow(x,x);
+	}
 	
 }
